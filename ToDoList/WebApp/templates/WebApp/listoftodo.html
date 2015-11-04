@@ -1,4 +1,7 @@
+<h1>To Do List Application</h1>
 {% if list_todo %}
+	<h3><a href="/WebApp/new">Create new todo list</a></h3>
+	<h4>List of todo lists</h4>
 	<ul>
 		{% for todolist in list_todo %}
 			<li><a href="{% url 'WebApp:todo' todolist.id %}">{{ todolist.title }}</a></li>
