@@ -16,3 +16,4 @@ def todo(request, todolist_id):
 	todo = get_object_or_404(ToDoList, pk=todolist_id)
 	return render(request, "WebApp/todo.html", {'todo': todo})
 
+def savetodo(request, todolist_id):

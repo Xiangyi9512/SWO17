@@ -3,8 +3,8 @@
 
 {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
 
-<form method="post">
+<form action="{% url 'WebApp:savetodo' question.id %}" method="post">
 {% csrf_token %}
-<textarea name="todo" style="width:250px;height:150px;">{{ todo.content | striptags }}</textarea>
+<textarea name="todos" style="width:250px;height:150px;">{{ todo.content | striptags }}</textarea>
 <input type="submit" value="Save" />
 </form>
