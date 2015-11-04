@@ -1,0 +1,9 @@
+{% if list_todolist %}
+	<ul>
+		{% for todolist in list_todolist %}
+			<li><a href="/WebApp/{{ todolist.id }}/">{{ todolist.title }}</a></li>
+		{% endfor %}
+	</ul>
+{% else %}
+	<p>You currently don't have any todo lists.</p>
+{% endif %}

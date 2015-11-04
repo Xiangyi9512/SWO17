@@ -7,9 +7,9 @@ from .models import Users, ToDoList
 def listoftodo(request):
 	list_todolist = ToDoList.objects.all()
 	context = {'list_todolist': list_todolist}
-	return render(request, 'WebApp/index.html', context)
+	return render(request, 'WebApp/listoftodo.html', context)
 
 def todo(request, todolist_id):
-	question = get_object_or_404(ToDoList, pk=todolist_id)
-	return render(request, "WebApp/todo.html", {'todolist': todolist})
+	todo = get_object_or_404(ToDoList, pk=todolist_id)
+	return render(request, "WebApp/todo.html", {'todo': todo})
 

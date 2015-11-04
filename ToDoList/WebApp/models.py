@@ -9,7 +9,7 @@ class Users(models.Model):
 		return self.username
 
 class ToDoList(models.Model):
-	username = models.ForeignKey(Users)
+	user = models.ForeignKey(Users)
 	title = models.CharField(max_length = 100)
 	content = models.TextField()
 	date = models.DateTimeField('date created')
