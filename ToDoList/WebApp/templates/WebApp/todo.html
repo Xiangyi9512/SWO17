@@ -1,4 +1,10 @@
 <h1>{{ todo.title }}</h1>
-<ul>
-	<li>{{ todo.content | linebreaks }}</li>
-</ul>
+
+{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+
+<form action="{% url 'WebApp:savetodo question.id %}" method="post">
+{% csrf_token %}
+<input type="text" name="todo" value="{{ todo.content | linebreaks }}" />
+<!--<label>{{ todo.content | linebreaks }}</label><br /> -->
+<input type="submit" value="Save" />
+</form>
