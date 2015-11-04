@@ -1,11 +1,12 @@
 from django.shortcuts import render, get_object_or_404
-
+from django.utils import timezone
 # Create your views here.
 
 from .models import Users, ToDoList
 
-#def index(request):
+from .forms import ToDoForm
 
+#def index(request):
 
 def listoftodo(request):
 	list_todo = ToDoList.objects.all()
@@ -14,6 +15,17 @@ def listoftodo(request):
 
 def todo(request, todolist_id):
 	todo = get_object_or_404(ToDoList, pk=todolist_id)
-	return render(request, "WebApp/todo.html", {'todo': todo})
-
-def savetodo(request, todolist_id):
+	data = {'title': todo.title,
+			'content': todo.content,
+			}
+	form = ToDoForm(data,)
+	if form.is_valid():
+		instance = form.save(commit=False)
+		todo.title = instance.title
+		todo.content = instance.content
+		todo.save()
+	context = {
+		'todo': todo,
+		'form': form
+	}
+	return render(request, "WebApp/todo.html", context)

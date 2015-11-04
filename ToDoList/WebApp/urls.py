@@ -5,5 +5,4 @@ from . import views
 urlpatterns = [
 	url(r'^$', views.listoftodo, name='listoftodo'),
 	url(r'^(?P<todolist_id>[0-9]+)/$', views.todo, name='todo'),
-	url(r'^(?P<question_id>[0-9]+)/savetodo/$', views.savetodo, name='savetodo'),
 ]
