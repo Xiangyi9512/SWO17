@@ -1,10 +1,9 @@
-
-<h1>{{ todo.title }}</h1>
+<h1>Edit To Do List</h1>
 
 {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
 
-<form action="{% url 'WebApp:savetodo' question.id %}" method="post">
+<form method="post">
 {% csrf_token %}
-<textarea name="todos" style="width:250px;height:150px;">{{ todo.content | striptags }}</textarea>
+{{ form.as_p }}
 <input type="submit" value="Save" />
 </form>
