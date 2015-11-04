@@ -1,7 +1,7 @@
-{% if list_todolist %}
+{% if list_todo %}
 	<ul>
-		{% for todolist in list_todolist %}
-			<li><a href="/WebApp/{{ todolist.id }}/">{{ todolist.title }}</a></li>
+		{% for todolist in list_todo %}
+			<li><a href="{% url 'WebApp:todo' todolist.id %}">{{ todolist.title }}</a></li>
 		{% endfor %}
 	</ul>
 {% else %}

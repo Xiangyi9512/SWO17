@@ -1,12 +1,15 @@
 from django.shortcuts import render, get_object_or_404
-from django.http import HttpResponse
+
 # Create your views here.
 
 from .models import Users, ToDoList
 
+#def index(request):
+
+
 def listoftodo(request):
-	list_todolist = ToDoList.objects.all()
-	context = {'list_todolist': list_todolist}
+	list_todo = ToDoList.objects.all()
+	context = {'list_todo': list_todo}
 	return render(request, 'WebApp/listoftodo.html', context)
 
 def todo(request, todolist_id):
