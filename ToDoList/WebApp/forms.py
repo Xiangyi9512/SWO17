@@ -12,7 +12,7 @@ class ToDoForm(forms.ModelForm):
 	# 	self.fields['title'].initial = todoinfo
 
 	title = forms.CharField(required=True, max_length=100)
-	content = forms.CharField(widget=forms.Textarea)
+	content = forms.CharField(required=False, widget=forms.Textarea)
 
 class AddNewToDoForm(forms.ModelForm):
 	class Meta:
@@ -25,7 +25,7 @@ class AddNewToDoForm(forms.ModelForm):
 	# 	self.fields['title'].initial = todoinfo
 
 	title = forms.CharField(required=True, max_length=100)
-	content = forms.CharField(widget=forms.Textarea)
+	content = forms.CharField(required=False, widget=forms.Textarea)
 
 class DeleteToDoForm(forms.ModelForm):
 	class Meta:
@@ -36,6 +36,7 @@ class SignUpForm(forms.ModelForm):
 	class Meta:
 		model = Users
 		fields = ['username','password']
+
 
 	password = forms.CharField(widget=forms.PasswordInput())
 

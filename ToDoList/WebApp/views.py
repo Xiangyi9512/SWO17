@@ -33,7 +33,6 @@ def index(request):
 
 	context = {
 		"form" : form
-
 	}		
 	
 	return render(request,"WebApp/index.html",context)
