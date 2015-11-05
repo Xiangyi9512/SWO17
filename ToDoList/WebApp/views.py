@@ -9,7 +9,6 @@ from .models import Users, ToDoList
 from .forms import ToDoForm, SignUpForm, DeleteToDoForm,LoginForm
 
 def index(request):
-
 	form1 = SignUpForm(request.POST or None)
 	form2 = LoginForm(request.POST or None)
 
@@ -19,7 +18,6 @@ def index(request):
 		if form1.is_valid():
 			instance = form1.save(commit=False)
 			instance.save()
-	
 	elif request.method=='POST' and 'Login' in request.POST:
 
 		if form2.is_valid():
@@ -34,13 +32,11 @@ def index(request):
 						return HttpResponseRedirect('/WebApp/')
 
 	if request.method=='POST' and 'SignUp' in request.POST:
-
 		context = {
 			"form" : form1
 		}	
 	
 	else :
-
 		context = {
 			"form" : form2
 		}		
