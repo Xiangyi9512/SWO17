@@ -1,9 +1,5 @@
 {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
 
-<h1>View todo list</h1>
-Title: {{ todo.title }} <br />
-Content: {{ todo.content | linebreaks }}
-
 <h1>Edit todolist</h1>
 <form method="post">
 {% csrf_token %}

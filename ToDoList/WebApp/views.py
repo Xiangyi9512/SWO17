@@ -63,6 +63,7 @@ def newtodo(request, users_id):
 		instance.date = timezone.now()
 		instance.user_id = user.id
 		instance.save()
+		return HttpResponseRedirect(reverse("WebApp:list", args=(user.id,)))
 	context = {
 		'user': user,
 		'form': form,
@@ -73,15 +74,16 @@ def todo(request, users_id, todolist_id):
 	user = get_object_or_404(Users, pk=users_id)
 	list_todo = user.todolist_set.all()
 	todo = get_object_or_404(list_todo, pk=todolist_id)
-	# data = {'title': todo.title,
-	# 		'content': todo.content,
-	# 		}
-	form = ToDoForm(request.POST)
+	data = {'title': todo.title,
+			'content': todo.content,
+			}
+	form = ToDoForm(request.POST or None, initial=data)
 	if form.is_valid():
 		instance = form.save(commit=False)
 		todo.title = instance.title
 		todo.content = instance.content
 		todo.save()
+		return HttpResponseRedirect(reverse("WebApp:list", args=(user.id,)))
 	context = {
 		'todo': todo,
 		'user': user,
