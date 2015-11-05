@@ -1,7 +1,5 @@
 from django.shortcuts import render, get_object_or_404
-
 from django.http import HttpResponseRedirect
-
 from django.utils import timezone
 
 # Create your views here.
@@ -25,7 +23,6 @@ def index(request):
 	}
 	return render(request,"WebApp/index.html",context)
 	
-
 	# elif 'Login' in request.POST:
 
 	# 	if form.is_valid():
@@ -41,27 +38,28 @@ def index(request):
 					
 	# 	return render(request,"WebApp/index.html",context)
 
-
 def listoftodo(request, users_id):
 	user = get_object_or_404(Users, pk=users_id)
 	list_todo = user.todolist_set.all()
 	context = {'list_todo': list_todo}
 	return render(request, 'WebApp/listoftodo.html', context)
 
-# def todo(request, todolist_id):
-# 	todo = get_object_or_404(ToDoList, pk=todolist_id)
-# 	data = {'title': todo.title,
-# 			'content': todo.content,
-# 			}
-# 	form = ToDoForm(request.POST)
-# 	if form.is_valid():
-# 		instance = form.save(commit=False)
-# 		todo.title = instance.title
-# 		todo.content = instance.content
-# 		todo.save()
-# 	context = {
-# 		'todo': todo,
-# 		'form': form
-# 	}
-# 	return render(request, "WebApp/todo.html", context)
+def todo(request, users_id, todolist_id):
+	user = get_object_or_404(Users, pk=users_id)
+	list_todo = user.todolist_set.all()
+	todo = get_object_or_404(list_todo, pk=todolist_id)
+	data = {'title': todo.title,
+			'content': todo.content,
+			}
+	form = ToDoForm(request.POST)
+	if form.is_valid():
+		instance = form.save(commit=False)
+		todo.title = instance.title
+		todo.content = instance.content
+		todo.save()
+	context = {
+		'todo': todo,
+		'form': form
+	}
+	return render(request, "WebApp/todo.html", context)
 
