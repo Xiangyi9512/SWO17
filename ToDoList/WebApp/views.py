@@ -11,8 +11,45 @@ def index(request):
 
 	form = SignUpForm(request.POST or None)
 	
-	# if 'SignUp' in request.POST:
+	# # if 'SignUp' in request.POST:
 
+	# if form.is_valid():
+	# 	instance = form.save(commit=False)
+	# 	instance.save()
+
+	# context = {
+	# 	"form" : form
+
+	# }
+	# return render(request,"WebApp/index.html",context)
+	
+	# # elif 'Login' in request.POST:
+
+	if form.is_valid():
+		instance = form.save(commit=False)
+	
+		user_list = Users.objects.all()
+		for users in user_list:
+			if (users.username == instance.username):
+				if (users.password == instance.password):
+					return HttpResponseRedirect('/WebApp/%s/' %users.id) 
+				else :
+					return HttpResponseRedirect('/WebApp/')
+
+	context = {
+		"form" : form
+
+	}
+
+				
+	return render(request,"WebApp/index.html",context)
+
+def addnewtodo(request,users_id):
+	user = get_object_or_404(Users, pk=users_id)
+
+	form = AddNewToDoForm(request.POST)
+	
+	
 	if form.is_valid():
 		instance = form.save(commit=False)
 		instance.save()
@@ -21,22 +58,7 @@ def index(request):
 		"form" : form
 
 	}
-	return render(request,"WebApp/index.html",context)
-	
-	# elif 'Login' in request.POST:
-
-	# 	if form.is_valid():
-	# 		instance = form.save(commit=False)
-		
-	# 		user_list = Users.objects.all()
-	# 		for users in user_list:
-	# 			if (users.username == instance.username):
-	# 				if (users.password == instance.password):
-	# 					return HttpResponseRedirect(request,"WebApp/listoftodo.html")
-	# 				else :
-	# 					return HttpResponseRedirect(request,"WebApp/index.html")
-					
-	# 	return render(request,"WebApp/index.html",context)
+	return render(request,"WebApp/createnewtodolist.html",context)
 
 def listoftodo(request, users_id):
 	user = get_object_or_404(Users, pk=users_id)
