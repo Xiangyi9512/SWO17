@@ -37,11 +37,27 @@ class SignUpForm(forms.ModelForm):
 		model = Users
 		fields = ['username','password']
 
+	username = forms.CharField(required=True, max_length=30)
 
-	password = forms.CharField(widget=forms.PasswordInput())
+	password = forms.CharField(required=True, widget=forms.PasswordInput())
 
-# class LoginForm(forms.ModelForm):
-# 	class Meta:
-# 		model = Users
-# 		fields = ['username','password']
+	def clean_username(self):
+		username = self.cleaned_data.get('username')
+
+		user_list = Users.objects.all()
+		for user in user_list : 	
+			if username == user.username:
+				raise forms.ValidationError("Please choose another username")
+		return username
+
+
+class LoginForm(forms.ModelForm):
+	class Meta:
+		model = Users
+		fields = ['username','password']
+		
+	username = forms.CharField(required=True, max_length=30)
+
+	password = forms.CharField(required=True, widget=forms.PasswordInput())
+
 	

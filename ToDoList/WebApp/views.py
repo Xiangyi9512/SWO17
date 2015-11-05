@@ -6,22 +6,24 @@ from django.utils import timezone
 # Create your views here.
 
 from .models import Users, ToDoList
-from .forms import ToDoForm, SignUpForm, DeleteToDoForm
+from .forms import ToDoForm, SignUpForm, DeleteToDoForm,LoginForm
 
 def index(request):
 
-	form = SignUpForm(request.POST or None)
+	form1 = SignUpForm(request.POST or None)
+	form2 = LoginForm(request.POST or None)
+
 	
 	if request.method=='POST' and 'SignUp' in request.POST:
 
-		if form.is_valid():
-			instance = form.save(commit=False)
+		if form1.is_valid():
+			instance = form1.save(commit=False)
 			instance.save()
 	
 	elif request.method=='POST' and 'Login' in request.POST:
 
-		if form.is_valid():
-			instance = form.save(commit=False)
+		if form2.is_valid():
+			instance = form2.save(commit=False)
 		
 			user_list = Users.objects.all()
 			for users in user_list:
@@ -31,9 +33,17 @@ def index(request):
 					else :
 						return HttpResponseRedirect('/WebApp/')
 
-	context = {
-		"form" : form
-	}		
+	if request.method=='POST' and 'SignUp' in request.POST:
+
+		context = {
+			"form" : form1
+		}	
+	
+	else :
+
+		context = {
+			"form" : form2
+		}		
 	
 	return render(request,"WebApp/index.html",context)
 
