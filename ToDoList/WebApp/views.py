@@ -1,6 +1,5 @@
 from django.shortcuts import render, get_object_or_404
 
-from django.contrib import auth
 from django.http import HttpResponseRedirect
 
 from django.utils import timezone
@@ -8,8 +7,7 @@ from django.utils import timezone
 # Create your views here.
 
 from .models import Users, ToDoList
-from .form import SignUpForm
-from .forms import ToDoForm
+from .forms import ToDoForm, SignUpForm
 
 def index(request):
 

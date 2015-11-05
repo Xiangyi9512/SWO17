@@ -1,5 +1,5 @@
 from django import forms
-from WebApp.models import ToDoList
+from WebApp.models import ToDoList, Users
 
 class ToDoForm(forms.ModelForm):
 	class Meta:
@@ -13,3 +13,14 @@ class ToDoForm(forms.ModelForm):
 
 	title = forms.CharField(required=True, max_length=100)
 	content = forms.CharField(widget=forms.Textarea)
+
+class SignUpForm(forms.ModelForm):
+	class Meta:
+		model = Users
+		fields = ['username','password']
+
+# class LoginForm(forms.ModelForm):
+# 	class Meta:
+# 		model = Users
+# 		fields = ['username','password']
+	
