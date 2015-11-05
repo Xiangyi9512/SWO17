@@ -27,6 +27,11 @@ class AddNewToDoForm(forms.ModelForm):
 	title = forms.CharField(required=True, max_length=100)
 	content = forms.CharField(widget=forms.Textarea)
 
+class DeleteToDoForm(forms.ModelForm):
+	class Meta:
+		model = ToDoList
+		fields = []
+
 class SignUpForm(forms.ModelForm):
 	class Meta:
 		model = Users

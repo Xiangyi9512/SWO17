@@ -6,7 +6,7 @@ from django.utils import timezone
 # Create your views here.
 
 from .models import Users, ToDoList
-from .forms import ToDoForm, SignUpForm
+from .forms import ToDoForm, SignUpForm, DeleteToDoForm
 
 def index(request):
 
@@ -71,9 +71,9 @@ def todo(request, users_id, todolist_id):
 	user = get_object_or_404(Users, pk=users_id)
 	list_todo = user.todolist_set.all()
 	todo = get_object_or_404(list_todo, pk=todolist_id)
-	data = {'title': todo.title,
-			'content': todo.content,
-			}
+	# data = {'title': todo.title,
+	# 		'content': todo.content,
+	# 		}
 	form = ToDoForm(request.POST)
 	if form.is_valid():
 		instance = form.save(commit=False)
@@ -86,4 +86,22 @@ def todo(request, users_id, todolist_id):
 		'form': form
 	}
 	return render(request, "WebApp/todo.html", context)
+
+def deletetodo(request, users_id, todolist_id):
+	user = get_object_or_404(Users, pk=users_id)
+	list_todo = user.todolist_set.all()
+	todo = get_object_or_404(list_todo, pk=todolist_id)
+	form = DeleteToDoForm(request.POST)
+	if form.is_valid():
+		todo.delete()
+
+
+
+	context = {
+		'todo': todo,
+		'user': user,
+		'form': form
+	}
+	return render(request, "WebApp/delete.html", context)
+	
 

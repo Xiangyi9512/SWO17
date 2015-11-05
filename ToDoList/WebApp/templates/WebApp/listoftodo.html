@@ -6,7 +6,7 @@
 	<h4>List of todo lists</h4>
 	<ul>
 		{% for todolist in list_todo %}
-			<li><a href="{% url 'WebApp:todo' todolist.user_id todolist.id %}">{{ todolist.title }}</a></li>
+			<li><h4><a href="{% url 'WebApp:todo' todolist.user_id todolist.id %}">{{ todolist.title }}</a></h4> <a href="/WebApp/{{ todolist.user_id }}/{{ todolist.id }}/delete">Delete todo list</a></li>
 		{% endfor %}
 	</ul>
 {% else %}
