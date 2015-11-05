@@ -37,6 +37,8 @@ class SignUpForm(forms.ModelForm):
 		model = Users
 		fields = ['username','password']
 
+	password = forms.CharField(widget=forms.PasswordInput())
+
 # class LoginForm(forms.ModelForm):
 # 	class Meta:
 # 		model = Users

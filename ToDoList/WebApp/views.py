@@ -94,14 +94,14 @@ def deletetodo(request, users_id, todolist_id):
 	form = DeleteToDoForm(request.POST)
 	if form.is_valid():
 		todo.delete()
+		
+	return HttpResponseRedirect('/WebApp/%s/' %users_id) 
 
-
-
-	context = {
-		'todo': todo,
-		'user': user,
-		'form': form
-	}
-	return render(request, "WebApp/delete.html", context)
+	# context = {
+	# 	'todo': todo,
+	# 	'user': user,
+	# 	'form': form
+	# }
+	# return render(request, "WebApp/delete.html", context)
 	
 
