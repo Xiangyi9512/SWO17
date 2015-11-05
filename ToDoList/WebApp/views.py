@@ -1,5 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponseRedirect
+from django.core.urlresolvers import reverse
 from django.utils import timezone
 
 # Create your views here.
@@ -41,8 +42,24 @@ def index(request):
 def listoftodo(request, users_id):
 	user = get_object_or_404(Users, pk=users_id)
 	list_todo = user.todolist_set.all()
-	context = {'list_todo': list_todo}
+	context = {
+		'user': user,
+		'list_todo': list_todo}
 	return render(request, 'WebApp/listoftodo.html', context)
+
+def newtodo(request, users_id):
+	user = get_object_or_404(Users, pk=users_id)
+	form = ToDoForm(request.POST)
+	if form.is_valid():
+		instance = form.save(commit=False)
+		instance.date = timezone.now()
+		instance.user_id = user.id
+		instance.save()
+	context = {
+		'user': user,
+		'form': form,
+	}
+	return render(request, "WebApp/newtodo.html", context)
 
 def todo(request, users_id, todolist_id):
 	user = get_object_or_404(Users, pk=users_id)

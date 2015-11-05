@@ -1,0 +1,11 @@
+<h1>Create To Do List</h1>
+
+{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+
+<form method="post">
+{% csrf_token %}
+{{ form.as_p }}
+<input type="submit" value="Save" />
+</form>
+
+<a href="/WebApp/{{ user.id }}/" class="btn">Return to list of todo lists</a>

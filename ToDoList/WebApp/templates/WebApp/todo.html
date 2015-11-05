@@ -1,9 +1,14 @@
-<h1>Edit To Do List</h1>
-
 {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
 
+<h1>View todo list</h1>
+Title: {{ todo.title }} <br />
+Content: {{ todo.content | linebreaks }}
+
+<h1>Edit todolist</h1>
 <form method="post">
 {% csrf_token %}
 {{ form.as_p }}
 <input type="submit" value="Save" />
 </form>
+
+<a href="/WebApp/{{ user.id }}/" class="btn">Return to list of todo lists</a>

@@ -1,6 +1,8 @@
 <h1>To Do List Application</h1>
-{% if list_todo %}
-	<h3><a href="#">Create new todo list</a></h3>
+
+<h3><a href="/WebApp/{{ user.id }}/new">Create new todo list</a></h3>
+
+{% if list_todo %}	
 	<h4>List of todo lists</h4>
 	<ul>
 		{% for todolist in list_todo %}
