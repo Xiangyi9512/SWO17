@@ -13,42 +13,36 @@ def index(request):
 
 	form = SignUpForm(request.POST or None)
 	
-	if 'SignUp' in request.POST:
+	# if 'SignUp' in request.POST:
 
-		
+	if form.is_valid():
+		instance = form.save(commit=False)
+		instance.save()
 
-		if form.is_valid():
-			instance = form.save(commit=False)
-			instance.save()
-		
+	context = {
+		"form" : form
 
-		context = {
-			"form" : form
-
-		}
-		return render(request,"WebApp/index.html",context)
+	}
+	return render(request,"WebApp/index.html",context)
 	
 
-	elif 'Login' in request.POST:
+	# elif 'Login' in request.POST:
 
-		if form.is_valid():
-			instance = form.save(commit=False)
+	# 	if form.is_valid():
+	# 		instance = form.save(commit=False)
 		
-			user_list = Users.objects.all()
-			for users in user_list:
-				if (users.username == instance.username):
-					if (users.password == instance.password):
-						return HttpResponseRedirect(request,"WebApp/listoftodo.html")
-					else :
-						return HttpResponseRedirect(request,"WebApp/index.html")
+	# 		user_list = Users.objects.all()
+	# 		for users in user_list:
+	# 			if (users.username == instance.username):
+	# 				if (users.password == instance.password):
+	# 					return HttpResponseRedirect(request,"WebApp/listoftodo.html")
+	# 				else :
+	# 					return HttpResponseRedirect(request,"WebApp/index.html")
 					
-		return render(request,"WebApp/index.html",context)
+	# 	return render(request,"WebApp/index.html",context)
 
 
-
-#def index(request):
-
-def listoftodo(request, users_id):
+def listoftodo(request):
 	list_todo = ToDoList.objects.all()
 	context = {'list_todo': list_todo}
 	return render(request, 'WebApp/listoftodo.html', context)
