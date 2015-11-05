@@ -53,7 +53,7 @@ def newtodo(request, users_id):
 		instance.date = timezone.now()
 		instance.user_id = user.id
 		instance.save()
-		return HttpResponseRedirect("/WebApp/%s" % user.id)
+		return HttpResponseRedirect(reverse("WebApp:list", args=(user.id,)))
 	context = {
 		'user': user,
 		'form': form,
@@ -73,7 +73,7 @@ def todo(request, users_id, todolist_id):
 		todo.title = instance.title
 		todo.content = instance.content
 		todo.save()
-		return HttpResponseRedirect("/WebApp/%s" % user.id)
+		return HttpResponseRedirect(reverse("WebApp:list", args=(user.id,)))
 	context = {
 		'todo': todo,
 		'user': user,
