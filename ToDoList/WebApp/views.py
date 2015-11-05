@@ -12,37 +12,30 @@ def index(request):
 
 	form = SignUpForm(request.POST or None)
 	
-	# # if 'SignUp' in request.POST:
+	if request.method=='POST' and 'SignUp' in request.POST:
 
-	# if form.is_valid():
-	# 	instance = form.save(commit=False)
-	# 	instance.save()
-
-	# context = {
-	# 	"form" : form
-
-	# }
-	# return render(request,"WebApp/index.html",context)
+		if form.is_valid():
+			instance = form.save(commit=False)
+			instance.save()
 	
-	# # elif 'Login' in request.POST:
+	elif request.method=='POST' and 'Login' in request.POST:
 
-	if form.is_valid():
-		instance = form.save(commit=False)
-	
-		user_list = Users.objects.all()
-		for users in user_list:
-			if (users.username == instance.username):
-				if (users.password == instance.password):
-					return HttpResponseRedirect('/WebApp/%s/' %users.id) 
-				else :
-					return HttpResponseRedirect('/WebApp/')
+		if form.is_valid():
+			instance = form.save(commit=False)
+		
+			user_list = Users.objects.all()
+			for users in user_list:
+				if (users.username == instance.username):
+					if (users.password == instance.password):
+						return HttpResponseRedirect('/WebApp/%s/' %users.id) 
+					else :
+						return HttpResponseRedirect('/WebApp/')
 
 	context = {
 		"form" : form
 
-	}
-
-				
+	}		
+	
 	return render(request,"WebApp/index.html",context)
 
 def listoftodo(request, users_id):
