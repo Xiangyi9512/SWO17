@@ -16,7 +16,7 @@ def deploy():
 
 
 def connected():
-	code_dir = '~/Desktop/test1/var'
+	code_dir = '~/var/www/html'
     	with cd(code_dir):
         	run("git clone https://github.com/Xiangyi9512/SWO17.git ")
         	run("touch app.wsgi")
