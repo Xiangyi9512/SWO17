@@ -2,6 +2,8 @@ from fabric.contrib.files import append, exists, sed
 from fabric.api import local, settings, abort, run, cd
 from fabric.contrib.console import confirm
 
+#the one worked with the xinzhang VM
+
 
 def pre_deploy():
     local("ls -a")
@@ -16,7 +18,7 @@ def deploy():
 
 
 def connected():
-	code_dir = '~/var/www/html'
+	code_dir = '~/Desktop/test1/var'
     	with cd(code_dir):
         	run("git clone https://github.com/Xiangyi9512/SWO17.git ")
         	run("touch app.wsgi")
