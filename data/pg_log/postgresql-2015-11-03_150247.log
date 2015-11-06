@@ -1,0 +1,20 @@
+2015-11-03 15:02:47 GMT LOG:  database system was shut down at 2015-11-03 15:02:38 GMT
+2015-11-03 15:02:47 GMT LOG:  MultiXact member wraparound protections are now enabled
+2015-11-03 15:02:47 GMT 日志:  数据库系统准备接受连接
+2015-11-03 15:02:47 GMT LOG:  autovacuum launcher started
+2015-11-03 15:03:48 GMT FATAL:  canceling authentication due to timeout
+2015-11-03 18:04:20 GMT FATAL:  canceling authentication due to timeout
+2015-11-03 23:19:43 GMT LOG:  could not receive data from client: No connection could be made because the target machine actively refused it.
+	
+2015-11-03 23:23:11 GMT LOG:  could not receive data from client: No connection could be made because the target machine actively refused it.
+	
+2015-11-03 23:23:14 GMT LOG:  could not receive data from client: No connection could be made because the target machine actively refused it.
+	
+2015-11-03 23:29:08 GMT LOG:  could not receive data from client: No connection could be made because the target machine actively refused it.
+	
+2015-11-03 23:29:21 GMT LOG:  could not receive data from client: No connection could be made because the target machine actively refused it.
+	
+2015-11-03 23:31:00 GMT LOG:  could not receive data from client: No connection could be made because the target machine actively refused it.
+	
+2015-11-03 23:31:04 GMT LOG:  could not receive data from client: No connection could be made because the target machine actively refused it.
+	

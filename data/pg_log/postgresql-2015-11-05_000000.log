@@ -1,0 +1,120 @@
+2015-11-05 00:01:50 GMT LOG:  could not receive data from client: No connection could be made because the target machine actively refused it.
+	
+2015-11-05 00:55:34 GMT LOG:  could not receive data from client: No connection could be made because the target machine actively refused it.
+	
+2015-11-05 01:00:50 GMT LOG:  could not receive data from client: No connection could be made because the target machine actively refused it.
+	
+2015-11-05 01:05:04 GMT LOG:  could not receive data from client: No connection could be made because the target machine actively refused it.
+	
+2015-11-05 01:21:05 GMT ERROR:  null value in column "date" violates not-null constraint
+2015-11-05 01:21:05 GMT DETAIL:  Failing row contains (1, sql, jfoaijfojojfoajfoji, null, null).
+2015-11-05 01:21:05 GMT STATEMENT:  INSERT INTO public."WebApp_todolist"(id, title, content) VALUES ('1'::integer, 'sql'::character varying(100), 'jfoaijfojojfoajfoji'::text)
+2015-11-05 01:21:13 GMT ERROR:  null value in column "date" violates not-null constraint
+2015-11-05 01:21:13 GMT DETAIL:  Failing row contains (1, sql, asdf, null, null).
+2015-11-05 01:21:13 GMT STATEMENT:  INSERT INTO public."WebApp_todolist"(id, title, content) VALUES ('1'::integer, 'sql'::character varying(100), 'asdf'::text)
+2015-11-05 01:21:28 GMT ERROR:  null value in column "date" violates not-null constraint
+2015-11-05 01:21:28 GMT DETAIL:  Failing row contains (1, sql, asdf, null, null).
+2015-11-05 01:21:28 GMT STATEMENT:  INSERT INTO public."WebApp_todolist"(id, title, content) VALUES ('1'::integer, 'sql'::character varying(100), 'asdf'::text)
+2015-11-05 01:21:42 GMT ERROR:  invalid input syntax for type timestamp with time zone: "2015" at character 140
+2015-11-05 01:21:42 GMT STATEMENT:  INSERT INTO public."WebApp_todolist"(id, title, content, date, user_id) VALUES ('1'::integer, 'sql'::character varying(100), 'asdf'::text, '2015'::timestamp with time zone, '1'::integer)
+2015-11-05 01:34:16 GMT LOG:  could not receive data from client: No connection could be made because the target machine actively refused it.
+	
+2015-11-05 06:47:43 GMT LOG:  could not receive data from client: No connection could be made because the target machine actively refused it.
+	
+2015-11-05 06:48:23 GMT LOG:  could not receive data from client: No connection could be made because the target machine actively refused it.
+	
+2015-11-05 06:48:35 GMT ERROR:  invalid input syntax for type timestamp with time zone: "2015" at character 140
+2015-11-05 06:48:35 GMT STATEMENT:  INSERT INTO public."WebApp_todolist"(id, title, content, date, user_id) VALUES ('1'::integer, 'sql'::character varying(100), 'asdf'::text, '2015'::timestamp with time zone, '1'::integer)
+2015-11-05 06:48:37 GMT ERROR:  invalid input syntax for type timestamp with time zone: "2015" at character 140
+2015-11-05 06:48:37 GMT STATEMENT:  INSERT INTO public."WebApp_todolist"(id, title, content, date, user_id) VALUES ('1'::integer, 'sql'::character varying(100), 'asdf'::text, '2015'::timestamp with time zone, '1'::integer)
+2015-11-05 06:48:38 GMT ERROR:  invalid input syntax for type timestamp with time zone: "2015" at character 140
+2015-11-05 06:48:38 GMT STATEMENT:  INSERT INTO public."WebApp_todolist"(id, title, content, date, user_id) VALUES ('1'::integer, 'sql'::character varying(100), 'asdf'::text, '2015'::timestamp with time zone, '1'::integer)
+2015-11-05 06:48:41 GMT ERROR:  invalid input syntax for type timestamp with time zone: "2015" at character 140
+2015-11-05 06:48:41 GMT STATEMENT:  INSERT INTO public."WebApp_todolist"(id, title, content, date, user_id) VALUES ('1'::integer, 'sql'::character varying(100), 'asdf'::text, '2015'::timestamp with time zone, '1'::integer)
+2015-11-05 06:49:15 GMT LOG:  could not receive data from client: No connection could be made because the target machine actively refused it.
+	
+2015-11-05 06:49:15 GMT LOG:  could not receive data from client: No connection could be made because the target machine actively refused it.
+	
+2015-11-05 06:49:15 GMT LOG:  could not receive data from client: No connection could be made because the target machine actively refused it.
+	
+2015-11-05 06:49:49 GMT FATAL:  password authentication failed for user "postgres"
+2015-11-05 06:49:49 GMT DETAIL:  Connection matched pg_hba.conf line 82: "host    all             all             ::1/128                 md5"
+2015-11-05 07:08:05 GMT LOG:  could not receive data from client: No connection could be made because the target machine actively refused it.
+	
+2015-11-05 07:14:22 GMT LOG:  could not receive data from client: No connection could be made because the target machine actively refused it.
+	
+2015-11-05 07:26:29 GMT LOG:  could not receive data from client: No connection could be made because the target machine actively refused it.
+	
+2015-11-05 07:42:27 GMT LOG:  could not receive data from client: No connection could be made because the target machine actively refused it.
+	
+2015-11-05 08:14:22 GMT LOG:  could not receive data from client: No connection could be made because the target machine actively refused it.
+	
+2015-11-05 10:22:24 GMT LOG:  could not receive data from client: No connection could be made because the target machine actively refused it.
+	
+2015-11-05 10:31:32 GMT LOG:  could not receive data from client: No connection could be made because the target machine actively refused it.
+	
+2015-11-05 10:32:29 GMT LOG:  could not receive data from client: No connection could be made because the target machine actively refused it.
+	
+2015-11-05 10:34:33 GMT LOG:  could not receive data from client: No connection could be made because the target machine actively refused it.
+	
+2015-11-05 10:42:12 GMT LOG:  could not receive data from client: No connection could be made because the target machine actively refused it.
+	
+2015-11-05 10:42:36 GMT LOG:  could not receive data from client: No connection could be made because the target machine actively refused it.
+	
+2015-11-05 10:51:24 GMT LOG:  could not receive data from client: No connection could be made because the target machine actively refused it.
+	
+2015-11-05 10:52:33 GMT LOG:  could not receive data from client: No connection could be made because the target machine actively refused it.
+	
+2015-11-05 10:55:33 GMT LOG:  could not receive data from client: No connection could be made because the target machine actively refused it.
+	
+2015-11-05 10:56:31 GMT LOG:  could not receive data from client: No connection could be made because the target machine actively refused it.
+	
+2015-11-05 10:57:23 GMT LOG:  could not receive data from client: No connection could be made because the target machine actively refused it.
+	
+2015-11-05 11:10:34 GMT LOG:  could not receive data from client: No connection could be made because the target machine actively refused it.
+	
+2015-11-05 11:11:24 GMT LOG:  could not receive data from client: No connection could be made because the target machine actively refused it.
+	
+2015-11-05 11:11:39 GMT LOG:  could not receive data from client: No connection could be made because the target machine actively refused it.
+	
+2015-11-05 11:13:08 GMT LOG:  could not receive data from client: No connection could be made because the target machine actively refused it.
+	
+2015-11-05 11:17:36 GMT LOG:  could not receive data from client: No connection could be made because the target machine actively refused it.
+	
+2015-11-05 11:18:34 GMT LOG:  could not receive data from client: No connection could be made because the target machine actively refused it.
+	
+2015-11-05 11:19:01 GMT LOG:  could not receive data from client: No connection could be made because the target machine actively refused it.
+	
+2015-11-05 11:30:02 GMT LOG:  could not receive data from client: No connection could be made because the target machine actively refused it.
+	
+2015-11-05 12:02:35 GMT LOG:  could not receive data from client: No connection could be made because the target machine actively refused it.
+	
+2015-11-05 12:08:07 GMT LOG:  could not receive data from client: No connection could be made because the target machine actively refused it.
+	
+2015-11-05 12:09:05 GMT LOG:  could not receive data from client: No connection could be made because the target machine actively refused it.
+	
+2015-11-05 12:19:46 GMT LOG:  could not receive data from client: No connection could be made because the target machine actively refused it.
+	
+2015-11-05 12:49:09 GMT LOG:  could not receive data from client: No connection could be made because the target machine actively refused it.
+	
+2015-11-05 13:57:39 GMT LOG:  could not receive data from client: No connection could be made because the target machine actively refused it.
+	
+2015-11-05 14:07:15 GMT LOG:  could not receive data from client: No connection could be made because the target machine actively refused it.
+	
+2015-11-05 14:12:16 GMT LOG:  could not receive data from client: No connection could be made because the target machine actively refused it.
+	
+2015-11-05 14:44:52 GMT FATAL:  password authentication failed for user "postgres"
+2015-11-05 14:44:52 GMT DETAIL:  Connection matched pg_hba.conf line 82: "host    all             all             ::1/128                 md5"
+2015-11-05 14:46:12 GMT LOG:  could not receive data from client: No connection could be made because the target machine actively refused it.
+	
+2015-11-05 15:29:48 GMT LOG:  could not receive data from client: No connection could be made because the target machine actively refused it.
+	
+2015-11-05 17:49:01 GMT LOG:  could not receive data from client: No connection could be made because the target machine actively refused it.
+	
+2015-11-05 22:26:46 GMT LOG:  could not receive data from client: No connection could be made because the target machine actively refused it.
+	
+2015-11-05 22:34:05 GMT FATAL:  canceling authentication due to timeout
+2015-11-05 22:34:45 GMT LOG:  could not receive data from client: No connection could be made because the target machine actively refused it.
+	
+2015-11-05 22:35:03 GMT FATAL:  canceling authentication due to timeout
+2015-11-05 23:02:08 GMT FATAL:  canceling authentication due to timeout
