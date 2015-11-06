@@ -1,5 +1,6 @@
 from fabric.contrib.files import append, exists, sed
-from fabric.api import env, local, run
+from fabric.api import local, settings, abort, run, cd
+from fabric.contrib.console import confirm
 
 
 def pre_deploy():
@@ -15,5 +16,7 @@ def deploy():
 
 
 def connected():
-	local("ssh xinzhang@newgate.cs.ucl.ac.uk")
-	run("ssh localuser@studvm96-p.cs.ucl.ac.uk")
+	code_dir = '/var/www/html'
+    	with cd(code_dir):
+        	run("git pull")
+        	run("touch app.wsgi")
