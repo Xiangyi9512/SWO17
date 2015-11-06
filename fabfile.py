@@ -4,7 +4,7 @@ from fabric.api import *
 from fabric.contrib.console import confirm
 
 #test for studvm 
-env.hosts = ['localuser@stduvm95-p.cs.ucl.ac.uk']
+env.hosts = ['localuser@stugvm95-p.cs.ucl.ac.uk']
 
 
 def pre_deploy():
