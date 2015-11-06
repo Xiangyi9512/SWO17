@@ -34,7 +34,6 @@ def connected1():
         run("touch app.wsgi")
 
 def connected2():
-<<<<<<< HEAD
     code_dir = '~/var/www/html/SWO17'
 
     with cd(code_dir):
