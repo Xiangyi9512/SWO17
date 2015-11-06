@@ -1,0 +1,62 @@
+2015-11-04 00:28:19 GMT LOG:  could not receive data from client: No connection could be made because the target machine actively refused it.
+	
+2015-11-04 00:28:38 GMT LOG:  could not receive data from client: No connection could be made because the target machine actively refused it.
+	
+2015-11-04 00:29:42 GMT LOG:  could not receive data from client: No connection could be made because the target machine actively refused it.
+	
+2015-11-04 07:26:42 GMT LOG:  could not receive data from client: No connection could be made because the target machine actively refused it.
+	
+2015-11-04 07:47:30 GMT LOG:  could not receive data from client: No connection could be made because the target machine actively refused it.
+	
+2015-11-04 07:56:26 GMT LOG:  could not receive data from client: No connection could be made because the target machine actively refused it.
+	
+2015-11-04 07:59:53 GMT LOG:  could not receive data from client: No connection could be made because the target machine actively refused it.
+	
+2015-11-04 07:59:56 GMT LOG:  could not receive data from client: No connection could be made because the target machine actively refused it.
+	
+2015-11-04 08:02:51 GMT LOG:  could not receive data from client: No connection could be made because the target machine actively refused it.
+	
+2015-11-04 08:02:54 GMT LOG:  could not receive data from client: No connection could be made because the target machine actively refused it.
+	
+2015-11-04 08:06:22 GMT LOG:  could not receive data from client: No connection could be made because the target machine actively refused it.
+	
+2015-11-04 08:11:25 GMT LOG:  could not receive data from client: No connection could be made because the target machine actively refused it.
+	
+2015-11-04 10:33:46 GMT LOG:  could not receive data from client: No connection could be made because the target machine actively refused it.
+	
+2015-11-04 10:33:56 GMT LOG:  could not receive data from client: No connection could be made because the target machine actively refused it.
+	
+2015-11-04 10:38:43 GMT LOG:  could not receive data from client: No connection could be made because the target machine actively refused it.
+	
+2015-11-04 10:39:47 GMT LOG:  could not receive data from client: No connection could be made because the target machine actively refused it.
+	
+2015-11-04 10:39:52 GMT LOG:  could not receive data from client: No connection could be made because the target machine actively refused it.
+	
+2015-11-04 12:19:15 GMT LOG:  could not receive data from client: No connection could be made because the target machine actively refused it.
+	
+2015-11-04 12:19:19 GMT FATAL:  password authentication failed for user "postgres"
+2015-11-04 12:19:19 GMT DETAIL:  Connection matched pg_hba.conf line 80: "host    all             all             127.0.0.1/32            md5"
+2015-11-04 18:54:14 GMT LOG:  could not receive data from client: No connection could be made because the target machine actively refused it.
+	
+2015-11-04 18:56:09 GMT LOG:  could not receive data from client: No connection could be made because the target machine actively refused it.
+	
+2015-11-04 19:47:28 GMT LOG:  could not receive data from client: No connection could be made because the target machine actively refused it.
+	
+2015-11-04 19:51:57 GMT LOG:  could not receive data from client: No connection could be made because the target machine actively refused it.
+	
+2015-11-04 19:58:42 GMT LOG:  could not receive data from client: No connection could be made because the target machine actively refused it.
+	
+2015-11-04 19:59:51 GMT LOG:  could not receive data from client: No connection could be made because the target machine actively refused it.
+	
+2015-11-04 20:23:16 GMT LOG:  could not receive data from client: No connection could be made because the target machine actively refused it.
+	
+2015-11-04 21:27:41 GMT LOG:  could not receive data from client: No connection could be made because the target machine actively refused it.
+	
+2015-11-04 21:32:40 GMT LOG:  could not receive data from client: No connection could be made because the target machine actively refused it.
+	
+2015-11-04 22:11:20 GMT LOG:  could not receive data from client: No connection could be made because the target machine actively refused it.
+	
+2015-11-04 22:16:29 GMT LOG:  could not receive data from client: No connection could be made because the target machine actively refused it.
+	
+2015-11-04 22:43:56 GMT LOG:  could not receive data from client: No connection could be made because the target machine actively refused it.
+	
