@@ -6,6 +6,7 @@ from fabric.contrib.console import confirm
 #test for studvm 
 env.hosts = ['localuser@stduvm95-p.cs.ucl.ac.uk']
 
+
 def pre_deploy():
     local("ls -a")
     local("git add -A")
@@ -27,12 +28,15 @@ def following_deploy():
 
 def connected1():
 	code_dir = '~/var/www/html'
+
     	with cd(code_dir):
             run("git clone https://github.com/Xiangyi9512/SWO17.git")
         run("touch app.wsgi")
 
 def connected2():
+<<<<<<< HEAD
     code_dir = '~/var/www/html/SWO17'
+
     with cd(code_dir):
             with settings(warn_only=True):
                 if run("test -d %s" % code_dir).failed:
