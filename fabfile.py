@@ -12,6 +12,9 @@ def pre_deploy():
     local("git commit -m 'test fab function'")
     local("git push")
 
+def github():
+    local("justfortest")
+
 
 #using first_deploy when this is the first timw to deploy to a new host or new directroy 
 def first_deploy():
