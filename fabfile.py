@@ -13,10 +13,11 @@ def pre_deploy():
     local("git push")
 
 
+#using first_deploy when this is the first timw to deploy to a new host or new directroy 
 def first_deploy():
 	pre_deploy()
 	connected1()
-
+#using following_deploy for the deploy after the first one
 def following_deploy():
     pre_deploy()
     connected2()
