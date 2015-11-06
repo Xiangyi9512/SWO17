@@ -27,14 +27,14 @@ def following_deploy():
     connected2()
 
 def connected1():
-	code_dir = '/home/localuser/Documents'
+	code_dir = '/home/localuser/Desktop'
 
     	with cd(code_dir):
             run("git clone https://github.com/Xiangyi9512/SWO17.git")
         run("touch app.wsgi")
 
 def connected2():
-    code_dir = '/home/localuser/Documents'
+    code_dir = '/home/localuser/Desktop/SWO17'
 
     with cd(code_dir):
             with settings(warn_only=True):
