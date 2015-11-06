@@ -20,13 +20,13 @@ def github():
 #using first_deploy when this is the first timw to deploy to a new host or new directroy 
 def first_deploy():
 	pre_deploy()
-	connected1()
+	connected()
 #using following_deploy for the deploy after the first one
 def following_deploy():
     pre_deploy()
     connected2()
 
-def connected1():
+def connected():
 	code_dir = '/home/localuser'
 
     	with cd(code_dir):
