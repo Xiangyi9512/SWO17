@@ -6,7 +6,6 @@ from fabric.contrib.console import confirm
 #the one worked with the xinzhang VM
 env.hosts = ['xinzhang@newgate.cs.ucl.ac.uk']
 
-
 def pre_deploy():
     local("ls -a")
     local("git add -A")
