@@ -19,7 +19,7 @@ def deploy():
 
 
 def connected():
-	code_dir = '~/Desktop/test1/var/SWO17'
+	code_dir = '~/Desktop/test1/var'
     	with cd(code_dir):
             with settings(warn_only=True):
                 if run("test -d %s" % code_dir).failed:
