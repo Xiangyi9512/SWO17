@@ -18,5 +18,5 @@ def deploy():
 def connected():
 	code_dir = '/var/www/html'
     	with cd(code_dir):
-        	run("git pull")
+        	run("git clone ")
         	run("touch app.wsgi")
