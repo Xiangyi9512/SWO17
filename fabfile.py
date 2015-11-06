@@ -13,17 +13,26 @@ def pre_deploy():
     local("git push")
 
 
-def deploy():
+def first_deploy():
 	pre_deploy()
-	connected()
+	connected1()
 
+def following_deploy():
+    pre_deploy()
+    connected2()
 
-def connected():
+def connected1():
 	code_dir = '~/Desktop/test1/var'
     	with cd(code_dir):
+            run("git clone https://github.com/Xiangyi9512/SWO17.git")
+        run("touch app.wsgi")
+
+def connected2():
+    code_dir = '~/Desktop/test1/var/SWO17'
+    with cd(code_dir):
             with settings(warn_only=True):
                 if run("test -d %s" % code_dir).failed:
                     run("git clone https://github.com/Xiangyi9512/SWO17.git")
-        with cd(code_dir):
+    with cd(code_dir):
             run("git pull https://github.com/Xiangyi9512/SWO17.git")
-        run("touch app.wsgi")
+            run("touch app.wsgi")
