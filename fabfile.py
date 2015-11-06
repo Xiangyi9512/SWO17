@@ -4,7 +4,7 @@ from fabric.api import *
 from fabric.contrib.console import confirm
 
 #test for studvm 
-env.hosts = ['localuser@studvm95-p.cs.ucl.ac.uk']
+env.hosts = ['xinzhang@newgate.cs.ucl.ac.uk']
 
 
 def pre_deploy():
@@ -27,14 +27,14 @@ def following_deploy():
     connected2()
 
 def connecte():
-	code_dir = '/home/localuser'
+	code_dir = '/Desktop/'
 
     	with cd(code_dir):
             run("git clone https://github.com/Xiangyi9512/SWO17.git")
         run("touch app.wsgi")
 
 def connected2():
-    code_dir = '/home/localuser/SWO17'
+    code_dir = '/Desktop/SWO17'
 
     with cd(code_dir):
             with settings(warn_only=True):
