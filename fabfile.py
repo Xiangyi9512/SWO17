@@ -27,7 +27,7 @@ def following_deploy():
     connected2()
 
 def connected():
-	code_dir = '~/var/www/html'
+	code_dir = '/var/www/html'
 
     	with cd(code_dir):
             run("git clone https://github.com/Xiangyi9512/SWO17.git")
