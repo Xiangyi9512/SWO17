@@ -22,7 +22,7 @@ def connected():
     	with cd(code_dir):
             with settings(warn_only=True):
                 if run("test -d %s" % code_dir).failed:
-                    run("git clone user@vcshost:/path/to/repo/.git %s" % code_dir)
+                    run("git clone https://github.com/Xiangyi9512/SWO17.git")
         with cd(code_dir):
             run("git pull")
             run("touch app.wsgi")
